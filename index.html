@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bukidnon Milk Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="site-header">
+        <img class="header-photo" src="header-bg.jpg"
+            alt="Bukidnon Milk Company milk bottles and jug on a wooden table with green mountains and cornfields behind">
+        <a class="brand" href="index.html">
+            <img src="logo.png" alt="Bukidnon Milk Company logo: a cow's head above the company name">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="main-nav" aria-label="Main menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Our Milk</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Our Farm</a></li>
+                <li><a href="#">Where to Buy</a></li>
+                <li><a href="#">Wholesale</a></li>
+                <li><a href="#">FAQ &amp; Handling</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Fresh Grass-Fed Milk from the Pastures of Bukidnon</h1>
+            <p class="tagline">100% grass-fed, non-GMO, farm-fresh cow's milk from Mindanao's largest dairy farm,
+                delivered to your family and your business.</p>
+            <a class="btn" href="#">Find Where to Buy</a>
+            <a class="btn btn-outline" href="#order">Place an Order</a>
+        </section>
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Bukidnon Milk Company</h2>
+            <p>Bukidnon Milk Company (BMC) raises about 2,000 cows on a 460-hectare grazing farm in Maramag, Bukidnon.
+                Our premium milk is sold through select Balai ni Fruitas, Landers, S&amp;R, and SM outlets and supplies
+                cafés, restaurants, bakeries, and retailers across the country.</p>
+            <p>With sales and distribution points in Maramag, Cagayan de Oro, and Davao City, we are growing our reach
+                and getting ready for new dairy products like cheese and yogurt.</p>
+        </section>
+
+        <!-- Highlights Section -->
+        <section class="highlights">
+            <h2>Highlights</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Product Catalog</h3>
+                    <p>Browse every BMC milk product with sizes, benefits, and storage tips, ready to grow as new
+                        products arrive.</p>
+                </article>
+                <article class="card">
+                    <h3>Where to Buy</h3>
+                    <p>Find the nearest retail outlet or regional office in Maramag, Cagayan de Oro, or Davao City.</p>
+                </article>
+                <article class="card">
+                    <h3>Wholesale Inquiry</h3>
+                    <p>Cafés, restaurants, and retailers can tell us their business and volume needs and get the right
+                        contact.</p>
+                </article>
+                <article class="card">
+                    <h3>Our Farm &amp; Quality</h3>
+                    <p>See how our cows graze in Maramag and what makes our milk grass-fed and non-GMO.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Order Placement Section -->
+        <section class="order" id="order">
+            <h2>Place an Order</h2>
+            <p class="order-intro">Fill in the form and our nearest regional office will confirm your order, delivery
+                schedule, and payment details.</p>
+
+            <form class="order-form" id="order-form" action="#" method="post">
+                <fieldset>
+                    <legend>Your details</legend>
+
+                    <label for="customer-type">I am ordering as a</label>
+                    <select id="customer-type" name="customer_type" required>
+                        <option value="">Select one</option>
+                        <option value="household">Household / individual</option>
+                        <option value="business">Business (café, restaurant, bakery, retailer)</option>
+                    </select>
+
+                    <label for="full-name">Full name</label>
+                    <input type="text" id="full-name" name="full_name" required>
+
+                    <label for="business-name">Business name (if applicable)</label>
+                    <input type="text" id="business-name" name="business_name">
+
+                    <label for="phone">Mobile number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" required>
+
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Your order</legend>
+
+                    <label for="product">Product</label>
+                    <select id="product" name="product" required>
+                        <option value="">Select a product</option>
+                        <option value="small-bottle">Fresh Milk - Small Bottle</option>
+                        <option value="1l-bottle">Fresh Milk - 1 Liter Bottle</option>
+                        <option value="gallon-jug">Fresh Milk - Gallon Jug</option>
+                    </select>
+
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+                    <label for="region">Delivery area</label>
+                    <select id="region" name="region" required>
+                        <option value="">Select a region</option>
+                        <option value="maramag">Maramag, Bukidnon</option>
+                        <option value="cdo">Cagayan de Oro</option>
+                        <option value="davao">Davao City</option>
+                        <option value="other">Other (we will check availability)</option>
+                    </select>
+
+                    <label for="address">Delivery address</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+
+                    <label for="delivery-date">Preferred delivery date</label>
+                    <input type="date" id="delivery-date" name="delivery_date">
+
+                    <label for="notes">Notes or estimated volume (for bulk orders)</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </fieldset>
+
+                <button type="submit" class="btn">Submit Order</button>
+                <p class="form-message" id="form-message" role="status" hidden>Thank you! Your order request has been
+                    received. We will contact you to confirm.</p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <p><strong>Bukidnon Milk Company</strong> &middot; Maramag, Bukidnon &middot; Cagayan de Oro &middot; Davao City
+        </p>
+        <p>Contact: Use the Contact page to reach your nearest regional office.</p>
+        <p>&copy; 2026 Bukidnon Milk Company. Website developed by Froanley Quitor.</p>
+    </footer>
+
+    <!-- Order form confirmation (demo only: no server yet) -->
+    <script>
+        document.getElementById("order-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("form-message").hidden = false;
+            this.reset();
+        });
+    </script>
+
+</body>
+
+</html>
